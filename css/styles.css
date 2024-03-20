@@ -16,6 +16,20 @@
   grid-column: 1 / span 2;
   position: relative;
 }
+.login {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 20px; /* Agrega el espacio deseado aquí */
+  padding: 10px;
+}
+
+.login > a {
+  text-decoration: none;
+  color: black;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
 
 .logoUser {
   width: 40px;
@@ -66,7 +80,6 @@
 .sidebar-actions > a > img {
   width: 40%;
   height: auto;
-  align-self: center;
   margin-top: 50px;
   margin-left: 30%;
 }
