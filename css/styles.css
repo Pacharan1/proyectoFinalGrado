@@ -1,0 +1,72 @@
+/* distribucion de la rejilla */
+.grid-container {
+  display: grid;
+  grid-template-columns: 5% auto;
+  gap: 0px;
+  padding: 10px;
+}
+/* bloque de titulo y login */
+.title-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 5px;
+  grid-column: 1 / span 2;
+  position: relative;
+}
+
+.logoUser {
+  width: 40px;
+  height: auto;
+}
+/* bloque de navegacion */
+.navegacion {
+  background-color: #ed564d;
+  width: 100%;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  color: white;
+  margin-left: 21px;
+  margin-right: 40px;
+  margin-top: 8px;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+.navegacion {
+  grid-column: 1 / span 2;
+  position: relative;
+}
+/* bloque de barra lateral */
+.sidebar-actions {
+  grid-column: 1;
+  background-color: #ed564d;
+  height: 500px; /* Esto hará que la barra lateral tenga la altura de la ventana de visualización */
+  position: relative; /* Esto hará que la barra lateral se mantenga en su lugar incluso cuando se desplace la página */
+}
+
+.sidebar-actions > a > img {
+  width: 40px;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+/* bloque de contenido principal */
+.hero {
+  grid-column: 2;
+  justify-content: left;
+  margin-left: 20px;
+}
