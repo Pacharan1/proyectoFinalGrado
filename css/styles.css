@@ -53,20 +53,27 @@
 /* bloque de barra lateral */
 .sidebar-actions {
   grid-column: 1;
+  display: flex;
+  flex-direction: column;
   background-color: #ed564d;
-  height: 500px; /* Esto hará que la barra lateral tenga la altura de la ventana de visualización */
+  min-width: 40px;
+  max-width: 80px;
+  height: 700px;
+  width: 90%; /* Esto hará que la barra lateral tenga la altura de la ventana de visualización */
   position: relative; /* Esto hará que la barra lateral se mantenga en su lugar incluso cuando se desplace la página */
 }
 
 .sidebar-actions > a > img {
-  width: 40px;
+  width: 40%;
   height: auto;
-  margin-left: 20px;
-  margin-top: 40px;
+  align-self: center;
+  margin-top: 50px;
+  margin-left: 30%;
 }
 /* bloque de contenido principal */
 .hero {
   grid-column: 2;
   justify-content: left;
   margin-left: 20px;
+  display: flexbox;
 }
