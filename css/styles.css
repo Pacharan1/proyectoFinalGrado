@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  gap: 20px; /* Agrega el espacio deseado aquí */
+  gap: 20px;
   padding: 10px;
 }
 
@@ -89,4 +89,79 @@
   justify-content: left;
   margin-left: 20px;
   display: flexbox;
+}
+
+/* bloque de login */
+.fondoLogin {
+  background-image: url("../src/fondo-login.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.grid-login {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-center {
+  background: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  margin: auto;
+}
+.logoLog {
+  width: 70%;
+  height: auto;
+  margin-bottom: 35px;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+form input {
+  margin-bottom: 35px;
+}
+
+form label .fa-solid {
+  font-size: 20px;
+  color: #ed564d;
+}
+
+form label input {
+  outline: none;
+  border: none;
+  color: black;
+  border-bottom: solid 1px #ed564d;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 15px;
+}
+
+form .link {
+  color: black;
+  font-size: 12px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+form button {
+  background-color: #ed564d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
