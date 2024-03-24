@@ -1,7 +1,7 @@
 /* distribucion de la rejilla */
 .grid-container {
   display: grid;
-  grid-template-columns: 5% auto;
+  grid-template-columns: 80px auto;
   gap: 0px;
   padding: 10px;
 }
@@ -70,7 +70,7 @@
   display: flex;
   flex-direction: column;
   background-color: #ed564d;
-  min-width: 40px;
+  min-width: 80px;
   max-width: 80px;
   height: 700px;
   width: 90%; /* Esto hará que la barra lateral tenga la altura de la ventana de visualización */
