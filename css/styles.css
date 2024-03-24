@@ -2,8 +2,11 @@
 .grid-container {
   display: grid;
   grid-template-columns: 80px auto;
-  gap: 0px;
-  padding: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 /* bloque de titulo y login */
 .title-login {
@@ -38,7 +41,7 @@
 /* bloque de navegacion */
 .navegacion {
   background-color: #ed564d;
-  width: 100%;
+  width: 100.6%;
   height: 50px;
 }
 
