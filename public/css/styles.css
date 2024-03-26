@@ -2,6 +2,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 80px auto;
+  /* incluirlo siempre que quiera introducir el sidebar */
 }
 
 body {
@@ -96,7 +97,7 @@ body {
 
 /* bloque de login */
 .fondoLogin {
-  background-image: url("../src/fondo-login.jpg");
+  background-image: url("../../src/fondo-login.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
