@@ -43,7 +43,7 @@ body {
 .navegacion {
   background-color: #ed564d;
   width: 100.6%;
-  height: 50px;
+  height: 60px;
 }
 
 .nav-links {
@@ -84,7 +84,7 @@ body {
 .sidebar-actions > a > img {
   width: 40%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: 30%;
 }
 /* bloque de contenido principal */

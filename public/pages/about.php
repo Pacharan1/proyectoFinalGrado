@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <?php include '../../layouts/header.php'; ?>
   <h1>Estas en la pantalla del About Us</h1>
 </body>
 

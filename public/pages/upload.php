@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <?php include '../../layouts/header.php'; ?>
   <h1>Estas en la pantalla de subida de archivos</h1>
 </body>
 
