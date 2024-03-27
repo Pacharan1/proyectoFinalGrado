@@ -7,7 +7,7 @@ echo '<footer>
   </div>
   <div class="texto-footer">
     <h4>Email</h4>
-    <p>bea@aceenglish.com</p>
+    <p>ace.english21@gmail.com</p>
   </div>
   <div class="texto-footer">
     <h4>Localizacion</h4>

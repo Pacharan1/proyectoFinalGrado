@@ -52,12 +52,12 @@
         </div>
         <div class="level">
           <img src="../../src/ESTUDIANTE 2.jpg" alt="">
-          <h3>Begginer</h3>
+          <h3>Intermediate</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, harum!</p>
         </div>
         <div class="level">
           <img src="../../src/ESTUDIANTE 3.jpg" alt="">
-          <h3>Begginer</h3>
+          <h3>Advance</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, harum!</p>
         </div>
       </div>
