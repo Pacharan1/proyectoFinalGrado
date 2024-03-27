@@ -39,7 +39,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <section class="niveles">
@@ -61,10 +60,8 @@
           <h3>Begginer</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, harum!</p>
         </div>
-
       </div>
     </div>
-
   </section>
 
   <section class="opiniones">
@@ -87,10 +84,8 @@
         </div>
       </div>
     </div>
-
   </section>
+  <?php include '../../layouts/footer.php'; ?>
 </body>
-
-<a href="contact.php" class="cta">Contacta con nosotros</a>
 
 </html>
