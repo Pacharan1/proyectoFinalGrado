@@ -175,7 +175,7 @@ form button {
   cursor: pointer;
 }
 /* -------------------------------------------------------------------------- */
-/* pagina principal */
+/* ------PAGINA PRINCIPAL----- */
 .contenedor {
   padding: 60px 0;
   width: 100%;
@@ -189,6 +189,7 @@ form button {
   text-align: center;
   margin-top: 10px;
 }
+/* Imagen presentacion */
 header {
   width: 100%;
   height: 396px;
@@ -226,6 +227,7 @@ header {
   color: #fff;
 }
 
+/* Sobre nosotros */
 .sobre-nosotros {
   display: flex;
   justify-content: space-evenly;
@@ -241,4 +243,66 @@ header {
 
 .parrafoTexto h3 {
   margin-bottom: 15px;
+}
+
+.parrafoTexto p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* nuesetros clientes */
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cards .tarjeta {
+  background: #ed564d;
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .tarjeta img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+}
+.cards .tarjeta > .texto-tarjeta {
+  width: 60%;
+  color: #fff;
+  font-size: 12px;
+}
+.cards .tarjeta > .texto-tarjeta p {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+/* Niveles */
+
+.niveles {
+  background: #f2f2f2;
+  padding-bottom: 30px;
+}
+.contenedorNivel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.level {
+  width: 48%;
+  text-align: center;
+}
+.level img {
+  width: 90%;
+}
+.level h3 {
+  margin: 10px 0;
 }
