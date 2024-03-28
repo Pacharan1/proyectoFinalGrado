@@ -350,3 +350,60 @@ footer {
   margin: 20px 0 0 0;
   color: #9e9797;
 }
+
+/* ----------------------------------------------------------------- */
+/* registro */
+.registro {
+  width: 500px;
+  height: 470px;
+  background: #e9e8e8;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 20px #363636;
+}
+
+.formRegistro h2 {
+  font-size: 22px;
+  margin-top: 50px;
+  color: #ed564d;
+  text-align: center;
+}
+
+.campo {
+  width: 95%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+.registro p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.registro a {
+  color: rgb(2, 32, 116);
+  text-decoration: none;
+}
+
+.registro a:hover {
+  color: rgb(2, 32, 116);
+  text-decoration: underline;
+}
+
+.btnRegistro {
+  width: 100%;
+  background: #ed564d;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}

@@ -25,7 +25,7 @@
         </label>
         <button type="submit" id="btnlogin">Acceder</button>
         <a href="#" class="link">¿Olvidaste tu contraseña?</a>
-        <a href="#" class="link">Registrate</a>
+        <a href="registro.php" class="link">Registrate</a>
       </form>
     </div>
     <div></div>
