@@ -20,7 +20,7 @@ echo '
         height="40px"
     /></a>
 
-    <a href="about.php">Sobre nosotros</a>
+    <a href="#about">Sobre nosotros</a>
 
     <a href="services.php">Tarifas</a>
 

@@ -24,7 +24,7 @@
     </div>
   </header>
 
-  <section class="sobre-nosotros">
+  <section class="sobre-nosotros" id="about">
     <div class="contenedor">
       <h2 class="titulo">Mejora la eficiencia con la que aprendes ingles al 200%</h2>
       <div class="sobre-nosotros">

@@ -11,8 +11,7 @@
     <title>Registro</title>
 </head>
 
-<body>
-    <?php include '../../layouts/header.php'; ?>
+<body class="fondoLogin">
     <section class="formRegistro">
         <h2>Registrate</h2>
         <form class="registro" action="../../actions/registro.php" method="POST">
@@ -24,6 +23,7 @@
             <input class="campo" type="password" name="repPass" placeholder="Repite Contraseña" required>
             <p><input type="checkbox" name="tyc" id="tyc">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="btnRegistro" type="submit" value="Registrarse">
+            <p class="error"></p>
         </form>
 
 </body>
