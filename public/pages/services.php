@@ -13,7 +13,35 @@
 
 <body>
   <?php include '../../layouts/header.php'; ?>
-  <h1>Estas en la pantalla de las tarifas</h1>
+  <h2 class="titulo">Tarifas</h2>
+  <div class="tarifas">
+    <div class="cardtarifa">
+      <img src="../../src/ESTUDIANTE 1.jpg" alt="">
+      <h3>High School</h3>
+      <p class="infocard">5 clases de 1 hora cada una</p>
+      <p class=descuento>Sin Descuento</p>
+      <h6>75 € IVA Incl.</h6>
+      <button class="btncomprar1">Comprar</button>
+    </div>
+
+    <div class="cardtarifa">
+      <img src="../../src/ESTUDIANTE 2.jpg" alt="">
+      <h3>College</h3>
+      <p class="infocard">10 clases de 1 hora cada una</p>
+      <p class=descuento>20% Dto</p>
+      <h6>130 € IVA Incl.</h6>
+      <button class="btncomprar2">Comprar</button>
+    </div>
+
+    <div class="cardtarifa">
+      <img src="../../src/ESTUDIANTE 3.jpg" alt="">
+      <h3>High School</h3>
+      <p class="infocard">15 clases de 1 hora cada una</p>
+      <p class=descuento>20% Dto</p>
+      <h6>165 € IVA Incl.</h6>
+      <button class="btncomprar3">Comprar</button>
+    </div>
+  </div>
   <?php include '../../layouts/footer.php'; ?>
 </body>
 
