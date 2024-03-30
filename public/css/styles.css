@@ -311,6 +311,36 @@ header {
   text-align: center;
 }
 
+/* responsive */
+@media screen and (max-width: 900px) {
+  header {
+    background-position: center;
+  }
+
+  .sobre-nosotros,
+  .cards,
+  .contenedorNivel {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sobre-nosotros .parrafoTexto,
+  .texto-tarjeta,
+  .level {
+    width: 90%;
+  }
+  .sobre-nosotros .img-sobrenosotros {
+    width: 90%;
+  }
+  .cards .tarjeta {
+    width: 90%;
+  }
+
+  .cards .tarjeta:first-child {
+    margin-bottom: 30px;
+  }
+}
 /* ------------------------------------------------------------ */
 /* Footer */
 footer {
@@ -450,7 +480,7 @@ h3 {
 }
 .infocard {
   text-align: center;
-  color: #b2bec3;
+  color: #88898a;
   padding-top: 0 8px;
 }
 .descuento {
@@ -566,3 +596,4 @@ h3 {
     margin-left: 0;
   }
 }
+/* ------------------------------------------------------------------- */
