@@ -624,3 +624,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+.proximaclase {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -24,6 +24,9 @@
             <div class="nivel-estudiante">
                 <h2>LEVEL 3!!</h2>
             </div>
+            <div class="proximaclase">
+                <h3>Tu proxima clase es el 01/10/2025 a las 16:00</h3>
+            </div>
             <div class="bono">
                 <h3>Bono College, te quedan 6 clases disponibles</h3>
             </div>
