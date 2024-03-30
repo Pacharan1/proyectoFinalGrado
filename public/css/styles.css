@@ -381,6 +381,14 @@ footer {
   color: #9e9797;
 }
 
+@media screen and (max-width: 500px) {
+  .contenido-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* ----------------------------------------------------------------- */
 /* registro */
 .registro {
@@ -597,3 +605,22 @@ h3 {
   }
 }
 /* ------------------------------------------------------------------- */
+
+/* perfil estudiante */
+.perfil-estudiante {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.perfil-estudiante div {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.nivel-estudiante {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

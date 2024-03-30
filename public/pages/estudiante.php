@@ -16,9 +16,33 @@
     <?php include '../../layouts/header.php'; ?>
     <div class="grid-container">
         <div class="sidebar-actions">
-            <a href="calendar.html"><img src="../../src/consultar-calendario.png" /></a>
-            <a href="messages.html"><img src="../../src/mensaje.png" /></a>
-            <a href="upload.html"><img src="../../src/subir-archivo.png" /></a>
+            <a href="calendar.php"><img src="../../src/consultar-calendario.png" /></a>
+            <a href="messages.php"><img src="../../src/mensaje.png" /></a>
+            <a href="upload.php"><img src="../../src/subir-archivo.png" /></a>
+        </div>
+        <div class="perfil-estudiante">
+            <div class="nivel-estudiante">
+                <h2>LEVEL 3!!</h2>
+            </div>
+            <div class="bono">
+                <h3>Bono College, te quedan 6 clases disponibles</h3>
+            </div>
+            <div class="historico">
+                <h3>Historico de Clases:</h3>
+                <ul>
+                    <li>Fecha 1: 01/01/2022</li>
+                    <li>Fecha 2: 02/02/2022</li>
+                    <li>Fecha 3: 03/03/2022</li>
+                </ul>
+            </div>
+            <div class="tareas-pendientes">
+                <h3>Tareas Pendientes:</h3>
+                <ul>
+                    <li>Tarea 1</li>
+                    <li>Tarea 2</li>
+                    <li>Tarea 3</li>
+                </ul>
+            </div>
         </div>
 
 
