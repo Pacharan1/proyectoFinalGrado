@@ -13,7 +13,12 @@
 </head>
 
 <body>
-    <?php include '../../layouts/header.php'; ?>
+
+    <?php
+    include('../../controlador/funciones.php');
+    include '../../layouts/header.php';
+
+    ?>
     <div class="grid-container">
         <div class="sidebar-actions">
             <a href="calendar.php"><img src="../../src/consultar-calendario.png" /></a>

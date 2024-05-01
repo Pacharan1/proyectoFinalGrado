@@ -10,20 +10,27 @@
 </head>
 
 <body class="fondoLogin">
+  <?php
+  include("../../controlador/funciones.php");
+  if (isset($_GET['errorform']) && $_GET['errorform'] === 'true') {
+    echo "<p class='check'>Registro realizado correctamente</p>";
+  };
+
+  ?>
   <div class="grid-login">
     <div></div>
     <div class="login-center" background-color="white">
-      <form class="formLogin" action="index.html" method="post">
+      <form class="formLogin" action="estudiante.php" method="post">
         <img class="logoLog" src="../../src/logotrasparente.png" alt="logoAE" />
         <label>
           <i class="fa-solid fa-user"></i>
-          <input type="text" id="user" placeholder="Usuario" />
+          <input type="email" name="email" placeholder="Usuario" require />
         </label>
         <label>
           <i class="fa-solid fa-lock"></i>
-          <input type="password" id="password" placeholder="Contraseña" />
+          <input type="password" name="password" placeholder="Contraseña" require />
         </label>
-        <button type="submit" id="btnlogin">Acceder</button>
+        <input class="btnAcceder" type="submit" name="iniciarSesion" value="Acceder">
         <a href="#" class="link">¿Olvidaste tu contraseña?</a>
         <a href="registro.php" class="link">Registrate</a>
       </form>

@@ -165,7 +165,7 @@ form .link {
   text-decoration: none;
 }
 
-form button {
+form .btnAcceder {
   background-color: #ed564d;
   color: white;
   border: none;

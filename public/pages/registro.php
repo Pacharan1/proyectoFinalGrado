@@ -12,17 +12,22 @@
 </head>
 
 <body class="fondoLogin">
+    <?php
+    include("../../controlador/funciones.php");
+
+    ?>
     <section class="formRegistro">
         <h2>Registrate</h2>
-        <form class="registro" action="../../actions/registro.php" method="POST">
+        <form class="registro" action="registro.php" method="POST">
             <input class="campo" type="text" name="nombre" placeholder="Nombre" required>
             <input class="campo" type="text" name="apellidos" placeholder="Apellidos" required>
             <input class="campo" type="text" name="dni" placeholder="DNI" required>
+            <input class="campo" type="tel" name="telefono" placeholder="Telefono" required>
             <input class="campo" type="email" name="email" placeholder="Email" required>
             <input class="campo" type="password" name="password" placeholder="Contraseña" required>
             <input class="campo" type="password" name="repPass" placeholder="Repite Contraseña" required>
             <p><input type="checkbox" name="tyc" id="tyc">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input class="btnRegistro" type="submit" value="Registrarse">
+            <input class="btnRegistro" type="submit" name="registro" value="Registrarse">
             <p class="error"></p>
         </form>
 
