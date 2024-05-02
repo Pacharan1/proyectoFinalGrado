@@ -13,7 +13,9 @@
 </head>
 
 <body>
-  <?php include '../../layouts/header.php'; ?>
+  <?php
+  session_start();
+  include '../../layouts/header.php'; ?>
   <div class="grid-container">
     <div class="sidebar-actions">
       <a href="calendar.html"><img src="../../src/consultar-calendario.png" /></a>
@@ -31,7 +33,8 @@
     </div>
   </div>
 
-  <?php include '../../layouts/footer.php'; ?>
+  <?php
+  include '../../layouts/footer.php'; ?>
 
   <!-- Hay que hacer el "servidor" donde se alojaran los archivos subidos y las instrucciones de nomenclatura de los archivos -->
 </body>

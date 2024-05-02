@@ -13,7 +13,10 @@
   <?php
   include("../../controlador/funciones.php");
   if (isset($_GET['errorform']) && $_GET['errorform'] === 'true') {
-    echo "<p class='check'>Registro realizado correctamente</p>";
+    echo "<p class='check-message'>Registro realizado correctamente</p>";
+  };
+  if (isset($_GET['errorform']) && $_GET['errorform'] === 'false') {
+    echo "<p class='error-message'>Usuario o contraseña incorrectas</p>";
   };
 
   ?>

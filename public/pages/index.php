@@ -12,7 +12,9 @@
 </head>
 
 <body>
-  <?php include '../../layouts/header.php'; ?>
+  <?php
+  session_start();
+  include '../../layouts/header.php'; ?>
   <header>
     <section class="presentacion">
       <h1>Welcome to Ace English</h1>

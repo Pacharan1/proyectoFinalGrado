@@ -15,6 +15,7 @@
 <body>
 
     <?php
+    session_start();
     include('../../controlador/funciones.php');
     include '../../layouts/header.php';
 

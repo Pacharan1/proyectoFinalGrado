@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <?php include '../../layouts/header.php'; ?>
+  <?php
+  session_start();
+  include '../../layouts/header.php'; ?>
   <div class="hero">
     <h1>Estas en la pantalla del Blog</h1>
   </div>

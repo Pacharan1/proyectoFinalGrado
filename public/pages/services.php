@@ -12,7 +12,9 @@
 </head>
 
 <body>
-  <?php include '../../layouts/header.php'; ?>
+  <?php
+  session_start();
+  include '../../layouts/header.php'; ?>
   <h2 class="titulo">Tarifas</h2>
   <div class="tarifas">
     <div class="cardtarifa">

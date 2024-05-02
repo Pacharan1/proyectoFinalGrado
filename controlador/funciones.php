@@ -8,7 +8,6 @@ $password = 'sF@94pkgPB,';
 try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexión exitosa a la base de datos";
 } catch (PDOException $e) {
     echo "Error al conectar a la base de datos: " . $e->getMessage();
 }
@@ -20,10 +19,7 @@ function hashContrasenia($contrasenia)
     return password_hash($contrasenia, PASSWORD_BCRYPT);
 };
 
-function coincidenContrasenias($contrasenia, $contraseniaBD)
-{
-    return password_verify($contrasenia, $contraseniaBD);
-};
+
 
 
 
@@ -37,14 +33,21 @@ function login($conexion, $usuario, $contrasena)
     try {
         $stm = $conexion->prepare("SELECT * FROM alumno WHERE email = '$usuario'");
         $stm->execute();
-        $row = $stm->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($contrasena, $row['contrasena'])) {
-            session_start();
-            echo "sesion inciada correctamente ";
+        if ($stm->rowCount() == 0) {
+            header("location: login.php?errorform=false");
         } else {
-            echo "el usuario o contraseña no es correcto";
-            echo "<br>";
-            echo "<form action='index.php' method='post'><button type='submit' name='inicio'>Volver al inicio</button></form>";
+            $row = $stm->fetch(PDO::FETCH_ASSOC);
+            if (password_verify($contrasena, $row['contrasena'])) {
+
+                // Guardar cada campo en una variable
+                $_SESSION['nombre'] = $row['nombre'];
+                $_SESSION['apellidos'] = $row['apellidos'];
+                $_SESSION['dni'] = $row['dni'];
+                $_SESSION['telefono'] = $row['telefono'];
+                $_SESSION['email'] = $row['email'];
+            } else {
+                header("location: login.php?errorform=false");
+            }
         }
     } catch (PDOException $e) {
         echo $e->getmessage();

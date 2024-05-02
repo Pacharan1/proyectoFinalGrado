@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 .login {
-  display: grid;
+  display: flex;
   grid-template-columns: auto auto;
   align-items: center;
   gap: 20px;
@@ -40,6 +40,26 @@ body {
 .logoUser {
   width: 40px;
   height: auto;
+}
+
+button.logout {
+  background-color: #ed564d; /* Red */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+button.logout:hover {
+  background-color: #da190b;
+  color: white;
 }
 /* --------------------------------------------------------- */
 /* bloque de navegacion */
@@ -173,6 +193,34 @@ form .btnAcceder {
   border-radius: 10px;
   font-size: 15px;
   cursor: pointer;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  color: red;
+  font-size: 1.5em;
+  z-index: 999;
+}
+
+.check-message {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  color: green;
+  font-size: 1.5em;
+  z-index: 999;
 }
 /* -------------------------------------------------------------------------- */
 /* ------PAGINA PRINCIPAL----- */
