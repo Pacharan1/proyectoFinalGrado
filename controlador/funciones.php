@@ -3,13 +3,14 @@
 //Acceso a la base de datos por PDO
 $dsn = 'mysql:host=localhost;dbname=aceenglish';
 $username = 'root';
-$password = 'sF@94pkgPB,';
+$password = 'sF@94pkgPB';
 
 try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Error al conectar a la base de datos: " . $e->getMessage();
+    header("location: error.php?error=" . urlencode("Error al conectar a la base de datos: " . $e->getMessage()));
+    exit;
 }
 
 
@@ -20,9 +21,6 @@ function hashContrasenia($contrasenia)
 };
 
 
-
-
-
 // SENTENCIAS
 /* aqui voy a establecer 2 funciones que ejecuten un SELECT y un INSERT en la base de datos */
 
@@ -31,7 +29,8 @@ function login($conexion, $usuario, $contrasena)
     y se almacena en una variable llamada "row". Despues se compara lo que has ingresado con el resultado 
     de la base de datos con la funcion password_verify y si es correcto te muestra el mensaje de bienvenida*/
     try {
-        $stm = $conexion->prepare("SELECT * FROM alumno WHERE email = '$usuario'");
+        $stm = $conexion->prepare("SELECT * FROM alumno WHERE email = :usuario");
+        $stm->bindParam(":usuario", $usuario, PDO::PARAM_STR);
         $stm->execute();
         if ($stm->rowCount() == 0) {
             header("location: login.php?errorform=false");
@@ -66,7 +65,7 @@ despues volvemos a la pagina index con un GET para que ejecute el mensaje en ver
 function registro($conexion, $nombre, $apellidos, $dni, $telefono, $email, $contrasena1, $contrasena2)
 {
     try {
-        if ($contrasena1 == $contrasena2) {
+        if (password_verify($contrasena1, $contrasena2)) {
 
             $stm = $conexion->prepare("INSERT INTO alumno(nombre, apellidos, dni, telefono, email, contrasena) VALUES (:nombre, :apellidos, :dni, :telefono, :email, :contrasena)");
             $stm->bindParam(":nombre", $nombre, PDO::PARAM_STR, 255);
