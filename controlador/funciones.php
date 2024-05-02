@@ -3,7 +3,7 @@
 //Acceso a la base de datos por PDO
 $dsn = 'mysql:host=localhost;dbname=aceenglish';
 $username = 'root';
-$password = 'sF@94pkgPB';
+$password = 'sF@94pkgPB,';
 
 try {
     $pdo = new PDO($dsn, $username, $password);
