@@ -441,7 +441,7 @@ footer {
 /* registro */
 .registro {
   width: 400px;
-  height: 460px;
+  height: 500px;
   background: rgba(255, 255, 255, 0.8);
   padding: 30px;
   margin: auto;
@@ -677,4 +677,11 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* ------------------------------------------------------------------- */
+/* calendario */
+.my-calendar {
+  max-width: 800px;
+  margin-left: 20px;
 }
