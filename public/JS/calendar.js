@@ -1,5 +1,4 @@
 const myModal = new bootstrap.Modal(document.getElementById("myModal"));
-var moment = require("moment"); // Importa la librería moment
 let frm = document.getElementById("formulario");
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
