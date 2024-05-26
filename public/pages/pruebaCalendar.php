@@ -28,25 +28,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
-                <form id="formulario">
+                <form id="formulario" action="pruebaCalendar.php" method="post">
                     <div class="modal-body">
                         <div class=" form-floating mb-3">
-                            <input type="text" class="form-control" id="title">
+                            <input type="text" class="form-control" id="title" name="title">
                             <label for="title" class="form-label">Evento</label>
                         </div>
                         <div class=" form-floating mb-3">
-                            <input type="date" class="form-control" id="start">
-                            <label for="start" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha">
+                            <label for="fecha" class="form-label">Fecha</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-control" id="hora" name="hora">
+                                <option value="">Selecciona una hora</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                            <label for="hora" class="form-label">Hora</label>
                         </div>
                         <div class=" form-floating mb-3">
-                            <input type="color" class="form-control" id="color">
+                            <input type="color" class="form-control" id="color" name="color">
                             <label for="color" class="form-label">Fecha</label>
                         </div>
+                        <input type="hidden" id="id_alumno" name="id_alumno" value="2" readonly>
+                        <input type="hidden" id="id_profesor" name="id_profesor" value="1" readonly>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-warning">Cancelar</button>
-                        <button class="btn btn-danger">Eliminar</button>
-                        <button class="btn btn-info" id="btnAccion">Registrar</button>
+                        <button class="btn btn-info" id="btnAccion" type="submit" name="registrarEvento">Registrar</button>
                     </div>
                 </form>
 
@@ -60,8 +73,42 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
     <script src='fullcalendar/core/index.global.js'></script> <!-- esto es para el idioma del calendario -->
     <script src='fullcalendar/core/locales/es.global.js'></script><!-- esto es para el idioma del calendario -->
-    <script src="<?php echo base_url; ?>../JS/moment.js"></script>
-    <script src="<?php echo base_url; ?>../JS/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- esto es para las alertas -->
+    <script src="../JS/moment.js"></script>
+    <script>
+        var clases = <?php echo json_encode($clases); ?>; //listado de eventos
+        $(document).ready(function() {
+            $('#btnAccion').on('click', function(e) {
+                e.preventDefault();
+
+                // Aquí puedes agregar los datos que quieres enviar al servidor
+                var datos = {
+                    title: $('#title').val(),
+                    fecha: $('#fecha').val(),
+                    hora: $('#hora').val(),
+                    color: $('#color').val(),
+                    id_alumno: $('#id_alumno').val(),
+                    id_profesor: $('#id_profesor').val()
+                };
+
+                $.post('../../controlador/funciones.php', datos, function(respuesta) {
+                    Swal.fire(
+                        '¡Well Done!',
+                        'Has reservado tu clase con éxito',
+                        'success'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+
+
 </body>
 
 </html>

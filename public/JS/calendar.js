@@ -1,4 +1,5 @@
 const myModal = new bootstrap.Modal(document.getElementById("myModal"));
+var moment = require("moment"); // Importa la librería moment
 let frm = document.getElementById("formulario");
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
@@ -11,23 +12,23 @@ document.addEventListener("DOMContentLoaded", function () {
       center: "title",
       right: "dayGridMonth,timeGridWeek,listWeek",
     },
+
+    events: clases.map(function (clase) {
+      var fechaYHoraInicio = clase.fecha + "T" + clase.hora;
+      var fechaYHoraFin = moment(fechaYHoraInicio).add(1, "hours").format(); // Añade una hora a la hora de inicio para obtener la hora de finalización
+      return {
+        title: clase.title,
+        start: fechaYHoraInicio,
+        end: fechaYHoraFin,
+        color: clase.color,
+        // Añade aquí cualquier otra propiedad que necesites
+      };
+    }),
     dateClick: function (info) {
-      document.getElementById("start").value = info.dateStr;
+      document.getElementById("fecha").value = info.dateStr;
       document.getElementById("titulo").textContent = "Registro de clase";
       myModal.show();
     },
   });
   calendar.render();
-  frm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const title = document.getElementById("title").value;
-    const fecha = document.getElementById("start").value;
-    const color = document.getElementById("color").value;
-    if (title == "" || fecha == "" || color == "") {
-      alert("Todos los campos son obligatorios");
-      return;
-      // https://www.youtube.com/watch?v=dI8Hx6pJZW0
-      // 5:30
-    }
-  });
 });

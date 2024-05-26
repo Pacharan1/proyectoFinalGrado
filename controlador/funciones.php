@@ -92,3 +92,50 @@ if (isset($_POST["registro"])) {
     $contrasena2 = $_POST["repPass"];
     registro($pdo, $nombre, $apellidos, $dni, $telefono, $email, $contrasena1, $contrasena2);
 }
+
+
+//FUNCIONES PARA EL CALENDARIO
+function registrarEvento($conexion, $title, $color, $fecha, $hora, $id_alumno, $id_profesor)
+{
+    // Preparar la consulta
+    $stm = $conexion->prepare("INSERT INTO clases (title, color, fecha, hora, id_alumno, id_profesor) VALUES (:title, :color, :fecha, :hora, :id_alumno, :id_profesor)");
+
+    // Vincular los parámetros
+    $stm->bindParam(':title', $title, PDO::PARAM_STR);
+    $stm->bindParam(':color', $color, PDO::PARAM_STR);
+    $stm->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+    $stm->bindParam(':hora', $hora, PDO::PARAM_STR);
+    $stm->bindParam(':id_alumno', $id_alumno, PDO::PARAM_INT);
+    $stm->bindParam(':id_profesor', $id_profesor, PDO::PARAM_INT);
+
+    // Ejecutar la consulta
+    $stm->execute();
+}
+
+
+// Comprobar si todos los campos necesarios están presentes
+if (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['fecha']) && isset($_POST['hora']) && isset($_POST['id_alumno']) && isset($_POST['id_profesor'])) {
+    // Recoger los datos del formulario
+    $title = $_POST['title'];
+    $color = $_POST['color'];
+    $fecha = $_POST['fecha'];
+    $hora = $_POST['hora'];
+    $id_alumno = $_POST['id_alumno'];
+    $id_profesor = $_POST['id_profesor'];
+    registrarEvento($pdo, $title, $color, $fecha, $hora, $id_alumno, $id_profesor);
+}
+
+
+
+function obtenerClases($pdo)
+{
+    $stm = $pdo->prepare("SELECT * FROM clases");
+    $stm->execute();
+    $clases = [];
+    while ($fila = $stm->fetch(PDO::FETCH_ASSOC)) {
+        $clases[] = $fila;
+    }
+    return $clases;
+}
+
+$clases = obtenerClases($pdo);
