@@ -27,9 +27,9 @@
   include '../../layouts/header.php'; ?>
   <div class="grid-container">
     <div class="sidebar-actions">
-      <a href="calendar.html"><img src="../../src/consultar-calendario.png" /></a>
-      <a href="messages.html"><img src="../../src/mensaje.png" /></a>
-      <a href="upload.html"><img src="../../src/subir-archivo.png" /></a>
+      <a href="pruebaCalendar.php"><img src="../../src/consultar-calendario.png" /></a>
+      <a href="messages.php"><img src="../../src/mensaje.png" /></a>
+      <a href="upload.php"><img src="../../src/subir-archivo.png" /></a>
     </div>
     <div class='my-calendar' id='calendar'></div>
   </div>

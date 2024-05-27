@@ -127,15 +127,30 @@ if (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['fecha']) &
 
 
 
-function obtenerClases($pdo)
+function obtenerClases($pdo) //esta funcion es para obtener las clases de la base de datos y mostrarlas en el calendario
 {
     $stm = $pdo->prepare("SELECT * FROM clases");
     $stm->execute();
     $clases = [];
     while ($fila = $stm->fetch(PDO::FETCH_ASSOC)) {
+        $fila['id_clases'] = strval($fila['id_clases']);
         $clases[] = $fila;
     }
     return $clases;
 }
-
+// aqui ejecutamos la funcion definida arriba para obtener las clases
 $clases = obtenerClases($pdo);
+//var_dump($clases);
+
+
+function eliminarClase($conexion, $id_clases)
+{
+    $stm = $conexion->prepare("DELETE FROM clases WHERE id_clases = :id_clases");
+    $stm->bindParam(':id_clases', $id_clases, PDO::PARAM_INT);
+    $stm->execute();
+}
+
+if (isset($_POST['eliminarEvento'])) {
+    $id_clases = $_POST['id_clases'];
+    eliminarClase($pdo, $id_clases);
+}

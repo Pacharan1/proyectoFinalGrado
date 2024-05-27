@@ -9,8 +9,20 @@
 </head>
 
 <body>
-  <?php include '../../layouts/header.php'; ?>
-  <h1>Estas en la pantalla de mensajes</h1>
+  <?php
+  session_start();
+  include '../../layouts/header.php'; ?>
+  <div class="grid-container">
+    <div class="sidebar-actions">
+      <a href="pruebaCalendar.php"><img src="../../src/consultar-calendario.png" /></a>
+      <a href="messages.php"><img src="../../src/mensaje.png" /></a>
+      <a href="upload.php"><img src="../../src/subir-archivo.png" /></a>
+    </div>
+    <h1>Estas en la pantalla de mensajes</h1>
+  </div>
+  <?php
+  include '../../layouts/footer.php'; ?>
+
 </body>
 
 </html>
