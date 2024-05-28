@@ -59,7 +59,7 @@
                         </div>
                         <input type="hidden" id="id_alumno" name="id_alumno" value="2" readonly>
                         <input type="hidden" id="id_profesor" name="id_profesor" value="1" readonly>
-                        <!-- <input type="hidden" id="id_clases" name="id_clases"> -->
+
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-warning">Cancelar</button>
@@ -70,81 +70,18 @@
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="../JS/calendar.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
-    <script src='fullcalendar/core/index.global.js'></script> <!-- esto es para el idioma del calendario -->
-    <script src='fullcalendar/core/locales/es.global.js'></script> <!-- esto es para el idioma del calendario -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- esto es para las alertas -->
-    <script src="../JS/moment.js"></script>
     <script>
-        var clases = <?php echo json_encode($clases); ?>; //listado de eventos
-        /*estas siguientes funciones son para que al pulsar el boton registrar en el formulario para reservar una clase,
-        salga una ventana indicando que has reservado la clase y se manden los datos por post.
-        Tambien se ha añadido una funcion para que al pulsar el boton de eliminar, salga una ventana indicando que has eliminado la clase 
-        Si no lo hacia de esta manera, no enviaba los datos por post desde el formulario porque prevalecia esta accion 
-        de la ventana emergente a enviar los datos primero*/
-        $(document).ready(function() {
-            $('#btnAccion').on('click', function(e) {
-                e.preventDefault();
-
-
-                var datos = {
-                    title: $('#title').val(),
-                    fecha: $('#fecha').val(),
-                    hora: $('#hora').val(),
-                    color: $('#color').val(),
-                    id_alumno: $('#id_alumno').val(),
-                    id_profesor: $('#id_profesor').val()
-                };
-
-                $.post('../../controlador/funciones.php', datos, function(respuesta) {
-                    Swal.fire(
-                        '¡Well Done!',
-                        'Has reservado tu clase con éxito',
-                        'success'
-                    ).then((result) => {
-                        if (result.isConfirmed) {
-                            location.reload();
-                        }
-                    });
-                });
-            });
-            $(document).on('click', '#btnEliminar', function(e) {
-                e.preventDefault();
-
-                // Aquí puedes obtener el valor de id_clases
-                var id_clases = $('#id_clases').val();
-                var name = 'eliminarEvento';
-                console.log(id_clases + '!!');
-                console.log(name + '!!');
-
-                $.post('../../controlador/funciones.php', {
-                    id_clases: id_clases,
-                    eliminarEvento: 'true'
-                }, function(response) {
-                    console.log(name);
-                    Swal.fire(
-                        '¡Eliminado!',
-                        'Tu elemento ha sido eliminado.',
-                        'success'
-                    ).then((result) => {
-                        if (result.isConfirmed) {
-                            location.reload();
-                        }
-                    });
-                }).fail(function(jqXHR, textStatus, errorThrown) {
-                    console.error("Error: ", textStatus, errorThrown);
-                });
-            });
-
-        });
+        var clases = <?php echo json_encode($clases); ?>;
     </script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script> <!-- biblioteca de FullCalendar -->
+    <script src='fullcalendar/core/index.global.js'></script> <!-- esto es para el idioma del calendario -->
+    <script src='fullcalendar/core/locales/es.global.js'></script> <!-- esto es para el idioma del calendario -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- biblioteca de JQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- esto es para las alertas -->
+    <script src="../JS/moment.js"></script>
+    <script src="../JS/calendar.js"></script> <!-- el archivo de JS tiene que ir despues de las dependencias -->
 
 </body>
 

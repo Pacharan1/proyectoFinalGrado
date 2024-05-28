@@ -100,7 +100,7 @@ button.logout:hover {
   background-color: #ed564d;
   min-width: 80px;
   max-width: 80px;
-  height: 700px;
+  height: auto;
   width: 90%; /* Esto hará que la barra lateral tenga la altura de la ventana de visualización */
   position: relative; /* Esto hará que la barra lateral se mantenga en su lugar incluso cuando se desplace la página */
 }
@@ -659,6 +659,18 @@ h3 {
   display: grid;
   grid-template-columns: 33% 33% 33%;
 }
+.nivel-estudiante {
+  background-image: url("../../src/level3.png"); /* Cambia esto a la ruta de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el div */
+  background-position: center; /* Centra la imagen en el div */
+  height: 140px;
+  margin-bottom: 20px;
+}
+.nivel-estudiante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .perfil-estudiante div {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -669,14 +681,25 @@ h3 {
 .nivel-estudiante {
   grid-column: 1 / span 3;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
+
 .proximaclase {
   grid-column: 1 / span 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.proximaclase h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.bono h4 {
+  text-align: center;
+  width: 100%;
 }
 
 /* ------------------------------------------------------------------- */
@@ -685,3 +708,5 @@ h3 {
   max-width: 800px;
   margin-left: 20px;
 }
+
+/* ------------------------------------------------------------------- */
