@@ -83,6 +83,7 @@
     <script src="../JS/moment.js"></script>
     <script src="../JS/calendar.js"></script> <!-- el archivo de JS tiene que ir despues de las dependencias -->
 
+    <?php require_once '../../layouts/footer.php'; ?>
 </body>
 
 </html>

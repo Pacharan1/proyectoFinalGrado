@@ -13,7 +13,7 @@
   session_start();
   include '../../layouts/header.php'; ?>
   <div class="hero">
-    <h1>Estas en la pantalla del Blog</h1>
+    <img class="construccion" src="../../src/construction.jpg" alt="">
   </div>
 </body>
 

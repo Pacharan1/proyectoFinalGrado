@@ -702,6 +702,12 @@ h3 {
   width: 100%;
 }
 
+.tareas-pendientes {
+  background-image: url("../../src/libreta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* ------------------------------------------------------------------- */
 /* calendario */
 .my-calendar {
@@ -710,3 +716,9 @@ h3 {
 }
 
 /* ------------------------------------------------------------------- */
+
+.construccion {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

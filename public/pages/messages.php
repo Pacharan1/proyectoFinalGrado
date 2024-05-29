@@ -18,7 +18,7 @@
       <a href="messages.php"><img src="../../src/mensaje.png" /></a>
       <a href="upload.php"><img src="../../src/subir-archivo.png" /></a>
     </div>
-    <h1>Estas en la pantalla de mensajes</h1>
+    <img class="construccion" src="../../src/construction.jpg" alt="">
   </div>
   <?php
   include '../../layouts/footer.php'; ?>
